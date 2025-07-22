@@ -1,0 +1,5 @@
+python-nmap
+scrcpy
+adbutils
+colorama
+qrcode
